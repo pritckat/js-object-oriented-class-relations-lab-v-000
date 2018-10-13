@@ -20,7 +20,7 @@ class Driver {
   }
 
   passengers() {
-    return this.trips.forEach(function(trip) {
+    return this.trips().forEach(function(trip) {
       return trip.passenger()
     })
   }
