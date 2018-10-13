@@ -20,8 +20,8 @@ class Driver {
   }
 
   passengers() {
-    return this.trips.forEach(function(trip) {
-      return trip.passenger()
+    return this.trips().map(trip => {
+      return trip.passenger();
     })
   }
 }
@@ -41,6 +41,11 @@ class Passenger {
     )
   }
 
+  drivers() {
+    return this.trips().map(trip => {
+    return trip.driver();
+    })
+  }
 }
 
 class Trip {
